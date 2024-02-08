@@ -1,0 +1,47 @@
+/* header.css */
+.header {
+    background: linear-gradient(45deg, yellow, red, black);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header-content {
+    max-width: 1200px; /* Ancho máximo del contenido del header */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+  
+  .logo-container {
+    margin-bottom: 20px; /* Espacio entre el logo y los botones */
+  }
+  
+  .logo {
+    width: 150px; /* Tamaño del logo */
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Elimina el margen predeterminado */
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-left: 15px; /* Espacio entre los elementos de la lista */
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; /* Espacio interior del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #333; /* Color de fondo del botón */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .nav-link:hover {
+    background-color: #555; /* Cambio de color al pasar el cursor */
+  }
+  

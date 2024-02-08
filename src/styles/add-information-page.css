@@ -1,0 +1,15 @@
+/* add-information-page.css */
+.page-background {
+  background: linear-gradient(45deg, yellow, red, black);
+  min-height: 100vh; /* Asegura que el fondo ocupe al menos el 100% de la altura de la ventana */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+.page-content {
+  max-width: 800px; /* Ancho máximo del contenido */
+  padding: 20px;
+  text-align: center;
+  color: #fff; /* Color del texto */
+}

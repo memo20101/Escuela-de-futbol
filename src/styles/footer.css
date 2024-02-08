@@ -1,0 +1,10 @@
+/* footer.css */
+.footer {
+  background: linear-gradient(45deg, yellow, red, black);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  color: #fff;
+}

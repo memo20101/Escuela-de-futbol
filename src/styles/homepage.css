@@ -1,0 +1,31 @@
+.homepage {
+  text-align: center;
+}
+
+.background {
+  background: linear-gradient(45deg, yellow, red, black);
+  padding: 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.school-info {
+  margin-top: 50px;
+}
+
+.school-info-heading {
+  font-size: 2rem;
+  color: #fff; /* Texto blanco para que se destaque sobre el fondo oscuro */
+  margin-bottom: 20px;
+}
+
+.school-info-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #fff; /* Texto blanco para que se destaque sobre el fondo oscuro */
+}
+
+
