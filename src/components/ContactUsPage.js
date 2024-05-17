@@ -8,7 +8,7 @@ const ContactUsPage = () => {
     email: '',
     birthdate: ''
   });
-  const [personas, setPersonas] = useState([]);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,22 +26,20 @@ const ContactUsPage = () => {
       email: formData.email,
       birthdate: formData.birthdate
     };
-    setPersonas([...personas, persona]);
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      birthdate: ''
-    });
-
+   console.log(persona);
     // Enviar los datos a la API de Google Apps Script
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzS769RYjyKNUu6yn12hbpxCgYf6Z_5ZH9MB-VYZvE/dev', {
-        method: 'GET',
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzS769RYjyKNUu6yn12hbpxCgYf6Z_5ZH9MB-VYZvE/dev?access_token=ya29.a0AfB_byCqSVazYhu7ovRxNiTAxHrshN0YLg-QQpEnPr7F7mE6-fvPYxZMmnI3fWHONA9Tzz6uM6vxvOTsczJWAavJmIIbGRf0-m1oHuPPhbK2CtjZ-6RqBcIY6QdVdPe1SvjF0VdFOA0oNqrkNkebFkQP6o_aqEtS35EaCgYKATMSARESFQHGX2MinNilG22TJjDvNlyphbXH7g0170', {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
-        }   
+        },
+        body:JSON.stringify(persona),
+        mode: 'no-cors'   
       });
+      if (!response.ok) {
+        throw new Error('La solicitud no se completó correctamente: ' + response.status);
+      }
       const responseData = await response.json();
       console.log(responseData); // Puedes manejar la respuesta de la API aquí
     } catch (error) {
